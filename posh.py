@@ -1,6 +1,3 @@
-#fastscore.slot.0: in-use
-#fastscore.slot.1: in-use
-
 import math
 
 # modelop.init
@@ -14,7 +11,6 @@ def metrics():
 # modelop.score
 def score(data):
     print(data)
-    print(type(data))
     start = 1
     max = 10000000
 
@@ -33,7 +29,9 @@ def score(data):
         total += math.sqrt(math.fabs(math.cos(i) * math.sin(i) / math.tan(i) * i**2 / i**3))
 
     return {
-        total / max
+        'start' : start,
+        'max' : max,
+        'score' : total / max
     }
 
 #print(score({'start' : 17, 'max' : 10}))
