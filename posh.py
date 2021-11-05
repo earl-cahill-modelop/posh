@@ -11,8 +11,9 @@ def metrics():
 
 # modelop.score
 def score(data):
-    start = time.time() * 1000
+    begin = time.time() * 1000
 
+    print(begin)
     print(data, flush=True)
     start = 1
     max = 10000000
@@ -37,7 +38,7 @@ def score(data):
         'start' : start,
         'max' : max,
         'score' : total / max,
-        'elapsed' : ((time.time() * 1000) - start) * 1000
+        'milliseconds' : (time.time() * 1000) - begin
     }
 
 #print(score({'start' : 17, 'max' : 10}))
