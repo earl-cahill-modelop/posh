@@ -30,7 +30,7 @@ def score(data):
 
     print('about to return', flush=True)
 
-    return {
+    yield {
         'start' : start,
         'max' : max,
         'score' : total / max
