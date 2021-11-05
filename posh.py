@@ -10,7 +10,7 @@ def metrics():
 
 # modelop.score
 def score(data):
-    print(data)
+    print(data, flush=True)
     start = 1
     max = 10000000
 
@@ -21,7 +21,7 @@ def score(data):
         if 'max' in data:
             max = data['max']
 
-    print("max=" + str(max) + ", start=" + str(start))
+    print("max=" + str(max) + ", start=" + str(start), flush=True)
 
     total = 0
 
