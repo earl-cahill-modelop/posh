@@ -1,3 +1,6 @@
+#fastscore.slot.0: in-use
+#fastscore.slot.1: in-use
+
 import math
 
 # modelop.init
