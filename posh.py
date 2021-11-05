@@ -25,8 +25,10 @@ def score(data):
 
     total = 0
 
-    for i in range(1, max):
+    for i in range(start, max):
         total += math.sqrt(math.fabs(math.cos(i) * math.sin(i) / math.tan(i) * i**2 / i**3))
+
+    print('about to return', flush=True)
 
     return {
         'start' : start,
