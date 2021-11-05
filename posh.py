@@ -25,7 +25,7 @@ def score(data):
         if 'max' in data:
             max = data['max']
 
-    print("max=" + str(max) + ", start=" + str(start), flush=True)
+    print("start=" + str(start) + ", max=" + str(max), flush=True)
 
     total = 0
 
@@ -41,7 +41,7 @@ def score(data):
     print('about to yield', flush=True)
     print(yieldDict, flush=True)
 
-    return yieldDict
+    yield yieldDict
 
 #print(score({'start' : 17, 'max' : 10}))
 #print(score({'start' : 17}))
