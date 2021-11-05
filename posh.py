@@ -37,7 +37,7 @@ def score(data):
         'start' : start,
         'max' : max,
         'score' : total / max,
-        'elapsed' : (time.time() * 1000) - start
+        'elapsed' : ((time.time() * 1000) - start) * 1000
     }
 
 #print(score({'start' : 17, 'max' : 10}))
