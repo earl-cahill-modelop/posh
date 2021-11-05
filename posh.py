@@ -1,5 +1,3 @@
-MAX = 10000000
-
 import math
 
 # modelop.init
@@ -15,7 +13,7 @@ def score(data):
     print(data)
     print(type(data))
     start = 1
-    max = MAX
+    max = 10000000
 
     if data is not None and (type(data) is dict):
         if 'start' in data:
