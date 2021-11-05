@@ -25,7 +25,7 @@ def score(data):
         if 'max' in data:
             max = data['max']
 
-    print("max=" + max + ", start=" + start)
+    print("max=" + str(max) + ", start=" + str(start))
 
     total = 0
 
