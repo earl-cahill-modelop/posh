@@ -34,12 +34,16 @@ def score(data):
 
     print('about to yield', flush=True)
 
-    yield {
+    yieldDict = {
         'start' : start,
         'max' : max,
         'score' : total / max,
         'milliseconds' : (time.time() * 1000) - begin
     }
 
-#print(score({'start' : 17, 'max' : 10}))
+    print(yieldDict)
+
+    return yieldDict
+
+print(score({'start' : 17, 'max' : 10}))
 #print(score({'start' : 17}))
