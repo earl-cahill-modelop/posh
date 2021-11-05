@@ -32,18 +32,16 @@ def score(data):
     for i in range(start, max):
         total += math.sqrt(math.fabs(math.cos(i) * math.sin(i) / math.tan(i) * i**2 / i**3))
 
-    print('about to yield', flush=True)
-
     yieldDict = {
         'start' : start,
         'max' : max,
         'score' : total / max,
         'milliseconds' : (time.time() * 1000) - begin
     }
-
-    print(yieldDict)
+    print('about to yield', flush=True)
+    print(yieldDict, flush=True)
 
     return yieldDict
 
-print(score({'start' : 17, 'max' : 10}))
+#print(score({'start' : 17, 'max' : 10}))
 #print(score({'start' : 17}))
