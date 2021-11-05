@@ -1,4 +1,5 @@
 import math
+import time
 
 # modelop.init
 def init():
@@ -10,6 +11,8 @@ def metrics():
 
 # modelop.score
 def score(data):
+    start = time.time() * 1000
+
     print(data, flush=True)
     start = 1
     max = 10000000
@@ -28,12 +31,13 @@ def score(data):
     for i in range(start, max):
         total += math.sqrt(math.fabs(math.cos(i) * math.sin(i) / math.tan(i) * i**2 / i**3))
 
-    print('about to return', flush=True)
+    print('about to yield', flush=True)
 
     yield {
         'start' : start,
         'max' : max,
-        'score' : total / max
+        'score' : total / max,
+        'elapsed' (time.time() * 1000) - start
     }
 
 #print(score({'start' : 17, 'max' : 10}))
